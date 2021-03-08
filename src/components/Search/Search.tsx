@@ -8,26 +8,12 @@ export interface Props {}
 export const Search: React.FC<Props> = (props: Props) => {
 
   const [citySearch, setCitySearch] = useState<string>('')
+
   const dispatch = useDispatch()
 
-  const debounce = (value: string, delay: number) => {
-    const handler = setTimeout(() => {
-      setCitySearch(value)
-    }, delay)
+  const handleChange = React.useCallback((e: React.ChangeEvent<HTMLInputElement>) => setCitySearch(e.target.value), [])
 
-    return () => {
-      clearTimeout(handler)
-    }
-  }
-
-  const handleChange = React.useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    debounce(e.target.value, 500)
-  }, [])
-
-  const handleClick = () => {
-    dispatch(loadWeather(citySearch))
-  }
-
+  const handleClick = () => dispatch(loadWeather(citySearch))
 
   return (
     <>

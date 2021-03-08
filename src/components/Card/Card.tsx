@@ -14,14 +14,19 @@ export const Card: React.FC<Props> = () => {
 
   const weather = useTypedSelector(state => state.weather)
 
-  console.log('secletor', weather.coord)
   return (
     <CardWrapper>
       <Search />
-      {/* <WeatherItem
-        text={selector.weather[0].description}
-        item=
-      /> */}
+      { Object.entries(weather.coord).map(i => {
+        console.log(i)
+        return (
+          <WeatherItem
+            key={i[0]}
+            text={i[0]}
+            item={i[1]}
+          />
+        )
+      })}
     </CardWrapper>
   )
 }
