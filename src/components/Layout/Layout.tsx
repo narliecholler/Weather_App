@@ -1,8 +1,10 @@
 import React from 'react'
 import GlobalStyle from './globalStyle'
-import Container from './style'
+import {Container, WeatherContainer} from './style'
 import Card from '../Card'
+import Search from '../Search'
 import Heading from '../Heading'
+import WeatherIcon from '../WeatherIcon'
 
 export interface Props {}
 
@@ -12,7 +14,13 @@ export const Layout: React.FC<Props> = () => {
       <GlobalStyle />
       <Container>
         <Heading />
-        <Card />
+        <Search />
+        {/* <WeatherIcon /> */}
+
+        <WeatherContainer>
+
+        </WeatherContainer>
+        {/* <Card /> */}
       </Container>
     </>
   )

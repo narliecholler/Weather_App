@@ -6,7 +6,9 @@ const HeadingWrapper = styled.div`
 
 const HeadingText = styled.h1`
   position: relative;
-  font-size: 2em;
+  font-size: 1em;
+  color: #fff;
+  text-align: left;
 `
 
 export {

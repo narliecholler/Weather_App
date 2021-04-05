@@ -4,6 +4,7 @@ import { useTypedSelector } from '../../store/reducer/searchReducer'
 import CardWrapper from './style'
 import Search from '../Search'
 import WeatherItem from '../WeatherItem'
+import WeatherBoard from '../WeatherBoard'
 import { WeatherModel } from '../../store/api/types'
 
 export interface Props {
@@ -27,6 +28,11 @@ export const Card: React.FC<Props> = () => {
           />
         )
       })}
+      <WeatherBoard
+        weather={weather.weather}
+        wind={weather.wind}
+        main={weather.main}
+      />
     </CardWrapper>
   )
 }

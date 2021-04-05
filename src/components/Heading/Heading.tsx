@@ -7,7 +7,7 @@ export const Heading: React.FC<Props> = () => {
   return (
     <HeadingWrapper>
       <HeadingText>
-        TypescriptWeatherApp
+        Weather App - Using react typescript, redux and styled components.
       </HeadingText>
     </HeadingWrapper>
   )
