@@ -18,6 +18,7 @@ export const loadWeather = (city: string): Effect => async (dispatch) => {
   try {
     return await axios.get(`${URL}${city}&appid=${API}`)
     .then((resp) => {
+      console.log('res', resp)
       dispatch(weatherSuccess(resp.data))
     })
     .catch((e) => {

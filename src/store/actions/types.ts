@@ -13,7 +13,7 @@ type LOADING_ERROR = typeof LOADING_ERROR
 export interface LoadingWeather extends Action {
   type: LOADING_WEATHER
 }
-export interface LoadingSucces extends Action {
+export interface LoadingSuccess extends Action {
   type: LOADING_SUCESS
   payload: WeatherModel
 }
@@ -23,4 +23,4 @@ export interface LoadingError extends Action {
 }
 
 export type WeatherActions =
-  LoadingWeather | LoadingSucces | LoadingError
+  LoadingWeather | LoadingSuccess | LoadingError

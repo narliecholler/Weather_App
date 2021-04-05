@@ -1,11 +1,11 @@
-import { LoadingWeather, LoadingSucces, LoadingError, LOADING_ERROR, LOADING_SUCCESS, LOADING_WEATHER } from './types' 
+import { LoadingWeather, LoadingSuccess, LoadingError, LOADING_ERROR, LOADING_SUCCESS, LOADING_WEATHER } from './types' 
 import { WeatherModel, Error } from '../api/types'
 
 export const loadingWeather = (): LoadingWeather => ({
   type: LOADING_WEATHER
 })
 
-export const weatherSuccess = (weather: WeatherModel): LoadingSucces => ({
+export const weatherSuccess = (weather: WeatherModel): LoadingSuccess => ({
   type: LOADING_SUCCESS,
   payload: weather,
 })
