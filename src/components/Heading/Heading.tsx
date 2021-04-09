@@ -1,13 +1,17 @@
 import React from 'react'
 import { HeadingWrapper, HeadingText } from './style'
 
-export interface Props {}
+export interface Props {
+  text: string,
+}
 
-export const Heading: React.FC<Props> = () => {
+export const Heading: React.FC<Props> = ({
+  text,
+}) => {
   return (
     <HeadingWrapper>
       <HeadingText>
-        Weather App - Using react typescript, redux and styled components.
+        {text}
       </HeadingText>
     </HeadingWrapper>
   )

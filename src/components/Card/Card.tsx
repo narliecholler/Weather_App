@@ -1,11 +1,11 @@
 import React from 'react'
-import { shallowEqual, useSelector, TypedUseSelectorHook } from 'react-redux'
+// import { shallowEqual, useSelector, TypedUseSelectorHook } from 'react-redux'
 import { useTypedSelector } from '../../store/reducer/searchReducer'
 import CardWrapper from './style'
 import Search from '../Search'
 import WeatherItem from '../WeatherItem'
 import WeatherBoard from '../WeatherBoard'
-import { WeatherModel } from '../../store/api/types'
+// import { WeatherModel } from '../../store/api/types'
 
 export interface Props {
 

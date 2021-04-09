@@ -1,10 +1,10 @@
 import React from 'react'
 import GlobalStyle from './globalStyle'
 import {Container, WeatherContainer} from './style'
-import Card from '../Card'
+// import Card from '../Card'
 import Search from '../Search'
 import Heading from '../Heading'
-import WeatherIcon from '../WeatherIcon'
+// import WeatherIcon from '../WeatherIcon'
 
 export interface Props {}
 

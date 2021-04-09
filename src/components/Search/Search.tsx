@@ -1,4 +1,3 @@
-import { relative } from 'node:path'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { loadWeather } from '../../store/api/getWeather'
@@ -23,11 +22,11 @@ export const Search: React.FC<Props> = (props: Props) => {
         type="text"
         placeholder="Enter a city"
         onChange={handleChange}
-        // onSubmit={handleClick}
+        value={citySearch}
       />
-      <a onClick={handleClick} style={{ position: 'relative'}}>
+      <button onClick={handleClick} style={{ position: 'relative'}}>
         <Icon className="fas fa-arrow-right"></Icon>
-      </a>
+      </button>
     </SearchContainer>
   ) 
 }
