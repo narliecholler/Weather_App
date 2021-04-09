@@ -13,7 +13,7 @@ export const Layout: React.FC<Props> = () => {
     <>
       <GlobalStyle />
       <Container>
-        <Heading />
+        <Heading text='Weather app - React/Typescript' />
         <Search />
         {/* <WeatherIcon /> */}
 
