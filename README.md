@@ -1,20 +1,11 @@
 
 ### What is this REPO?
 
-This repo is used to learn mainly typescript and redux together. It's to further my typescript knowlegde within React.
+This repo is used to learn mainly react/typescript and redux together. It's to further my react/typescript with redux knowledge within React. In particularly, testing async action creators.
 
-### TYPESCRIPT
+## Progress
 
-# ACTIONS
-
-With actions here, we are creating an interface extending Action that will type the return, in this instance it will be a combination of ACTION TYPE and PAYLOAD. We then use the union method to attach them all to a type, which will be used for the reducer (meaning any of).
-
-We are typically doing the same with the action type, assigning it a variable like you normally would and then creating a type which is assigned only to a TYPEOF the string assigned to the variable.
-
-Actions are then creating which are giving the return type of the interfaces described above, so we know that the action returns either type and payload of just type. We are also giving props a type, declared from other types.ts files.
-
-
-
+This app is still in development, however it runs and the data from searching a city will appear in the console of the browser. This was until all of the redux functionality was set up. If you start this app, you will need to replace the url and api with your own from OpenWeather.org.
 
 # Getting Started with Create React App
 
