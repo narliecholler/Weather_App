@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { loadWeather } from '../../store/api/getWeather'
+import { fetchWeatherData } from '../../store/actions/searchAction'
 import { SearchContainer, SearchBar, Icon } from './style'
 
 export interface Props {}
@@ -13,7 +13,7 @@ export const Search: React.FC<Props> = (props: Props) => {
 
   const handleChange = React.useCallback((e: React.ChangeEvent<HTMLInputElement>) => setCitySearch(e.target.value), [])
 
-  const handleClick = () => dispatch(loadWeather(citySearch))
+  const handleClick = () => dispatch(fetchWeatherData(citySearch))
 
   return (
     <SearchContainer>

@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react'
-import { render, RenderOptions } from '@testing-library/react'
+import { render, RenderOptions, RenderResult } from '@testing-library/react'
 import { theme } from './theme'
 import { ThemeProvider } from 'styled-components'
 import { Provider } from 'react-redux'
@@ -27,7 +27,7 @@ const TheProvider: React.FC<ProviderProps> = ({
 const customRender= (
   ui: ReactElement,
   options?: Omit<RenderOptions, 'queries'>
-) => render(ui, { wrapper: TheProvider, ...options })
+): RenderResult => render(ui, { wrapper: TheProvider, ...options })
 
 export * from '@testing-library/react'
 

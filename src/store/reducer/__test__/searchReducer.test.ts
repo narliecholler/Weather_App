@@ -1,11 +1,14 @@
 import { searchReducer, initialState } from '../searchReducer'
-import { LOADING_WEATHER, LoadingError, LoadingSuccess } from '../../actions/types'
-import { WeatherModel } from '../../api/types'
+import {  LoadingError, LoadingSuccess } from '../../actions/types'
+import { WeatherModel } from '../../types'
+
 /**
+ * 
  * TESTING REDUCER
  * 
  * We just need to import the reducer and state and test with each action, test that each different action returns the correct state,
  * as according to the switch statement.
+ * 
 */
 
 const successPayload: WeatherModel = {

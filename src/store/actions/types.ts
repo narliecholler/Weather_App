@@ -1,5 +1,5 @@
 import { Action } from 'redux'
-import { WeatherModel, Error } from '../api/types'
+import { WeatherModel, Error } from '../types'
 
 export const LOADING_WEATHER = 'LOADING_WEATHER'
 type LOADING_WEATHER = typeof LOADING_WEATHER
