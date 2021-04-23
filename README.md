@@ -1,3 +1,10 @@
+### IMPORTANT\
+
+You can view the app here (github pages): https://narliecholler.github.io/weather-app-redux-ts/
+
+Please ignore the design, it is still in development. You can see it works by searching for a city and finding the result in the browser console. This is as far as I've got right now, getting all the functionality working before focusing on the design and interaction.
+
+
 
 ### What is this REPO?
 
