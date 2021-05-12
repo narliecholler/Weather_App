@@ -8,9 +8,8 @@ export interface Props {}
 export const Search: React.FC<Props> = (props: Props) => {
 
   const [citySearch, setCitySearch] = useState<string>('')
-
   const dispatch = useDispatch()
-
+  
   const handleChange = React.useCallback((e: React.ChangeEvent<HTMLInputElement>) => setCitySearch(e.target.value), [])
 
   const handleClick = () => dispatch(fetchWeatherData(citySearch))

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import configureStore from 'redux-mock-store'
 import thunk, { ThunkDispatch } from 'redux-thunk'
-import { LOADING_ERROR, LOADING_SUCCESS, LOADING_WEATHER, WeatherActions } from '../types'
+import { LOADING_ERROR, LOADING_SUCCESS, LOADING_WEATHER, CLEAR_STATE, WeatherActions } from '../types'
 import { loadingWeather, weatherSuccess, loadingError, fetchWeatherData } from '../searchAction'
 import { State } from '../../types'
 import { res, initialState } from './helpers'
@@ -72,11 +72,10 @@ describe('Testing api action creator', () => {
     // call the async action creator
     await store.dispatch(fetchWeatherData('peterborough'))
     // test what axios.get is calling
-    expect(mockedAxios.get).toBeCalledWith(`${URL}peterborough&appid=${API}`)
+    expect(mockedAxios.get).toBeCalledWith(`${URL}peterborough&units=metric&appid=${API}`)
     // test the actions being returned
     expect(store.getActions()).toEqual([
-      { type: LOADING_WEATHER },
-      { type: LOADING_SUCCESS, payload: res.data }
+      { type: 'LOADING_SUCCESS', payload: res.data }
     ])
   })
 
@@ -86,13 +85,12 @@ describe('Testing api action creator', () => {
     // call the async action creator
     await store.dispatch(fetchWeatherData('zxcvb'))
     // test what axios.get is calling
-    expect(mockedAxios.get).toBeCalledWith(`${URL}zxcvb&appid=${API}`)
+    expect(mockedAxios.get).toBeCalledWith(`${URL}zxcvb&units=metric&appid=${API}`)
 
-    console.log(store.getActions())
+    console.log('hereh', store.getActions())
     // test the actions being returned
     expect(store.getActions()).toEqual([
-      { type: LOADING_WEATHER },
-      { type: LOADING_ERROR, payload: 'Incorrect City Name' }
+      { type: 'LOADING_ERROR', payload: 'Incorrect City Name' }
     ])
   })
 

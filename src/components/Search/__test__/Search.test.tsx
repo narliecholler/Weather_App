@@ -1,7 +1,7 @@
 import React from 'react'
 import * as reactRedux from 'react-redux'
 import userEvent from '@testing-library/user-event'
-import { render } from 'test-utils'
+import { render } from '../../../test-utils'
 import { Search } from '../Search'
 
 describe('Testing the search component', () => {

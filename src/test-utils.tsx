@@ -3,10 +3,7 @@ import { render, RenderOptions, RenderResult } from '@testing-library/react'
 import { theme } from './theme'
 import { ThemeProvider } from 'styled-components'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import { searchReducer, initialState } from './store/reducer/searchReducer'
-
-const store = createStore(searchReducer, initialState)
+import store from './store/store'
 
 interface ProviderProps { 
   children?: NonNullable<React.ReactNode>

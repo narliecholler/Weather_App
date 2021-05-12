@@ -51,6 +51,8 @@ export const initialState: State = {
 
 export const searchReducer = (state = initialState, action: WeatherActions): State => {
   switch(action.type) {
+    case 'CLEAR_STATE':
+      return initialState
     case 'LOADING_WEATHER':
       return {
         ...state,

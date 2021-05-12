@@ -3,7 +3,7 @@ type Coord = {
   lat: number,
 }
 
-type Weather = {
+export type Weather = {
   id: number,
   main: string,
   description: string,
@@ -39,7 +39,7 @@ type Sys = {
 
 export interface WeatherModel {
   coord: Coord,
-  weather: Array<Weather>,
+  weather: Weather[],
   base: string,
   main: Main,
   visibility: number,
